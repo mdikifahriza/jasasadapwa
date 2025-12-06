@@ -1,0 +1,41 @@
+{
+  "name": "porto2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.6.1",
+    "@portabletext/react": "^5.0.0",
+    "framer-motion": "^12.23.6",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.525.0",
+    "negotiator": "^1.0.0",
+    "next": "^15.4.1",
+    "next-mdx-remote": "^5.0.0",
+    "next-sanity": "^11.6.10",
+    "next-themes": "^0.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-type-animation": "^3.2.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/json-schema": "^7.0.15",
+    "@types/negotiator": "^0.6.4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-modal": "^3.16.3",
+    "autoprefixer": "^10.4.21",
+    "eslint-config-next": "15.4.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
