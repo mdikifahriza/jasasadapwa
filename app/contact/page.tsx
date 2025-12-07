@@ -142,9 +142,7 @@ export default function ContactPage() {
 
             <div className="pt-4">
               <p className="text-sm text-[var(--foreground)]/60 italic">
-                * Untuk pertanyaan mendesak di luar jam operasional, silakan
-                kirim pesan dan kami akan merespons secepatnya pada hari kerja
-                berikutnya.
+                * Kami siap melayani anda 24 jam, silahkan kontak admin melalui tombol yang tersedia diatas.
               </p>
             </div>
           </div>
@@ -164,4 +162,5 @@ export default function ContactPage() {
     </div>
   );
 }
+
 
