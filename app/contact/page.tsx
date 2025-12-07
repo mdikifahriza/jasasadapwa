@@ -24,15 +24,6 @@ export default function ContactPage() {
       linkText: "@sadapwhatsapp",
       gradient: "from-cyan-500 to-teal-500",
     },
-    {
-      id: 3,
-      title: "WhatsApp",
-      description: "Chat langsung dengan tim kami via WhatsApp",
-      icon: MessageCircle,
-      link: "https://wa.me/6283846249279",
-      linkText: "+62 838-4624-9279",
-      gradient: "from-green-500 to-emerald-500",
-    },
   ];
 
   return (
@@ -173,3 +164,4 @@ export default function ContactPage() {
     </div>
   );
 }
+
