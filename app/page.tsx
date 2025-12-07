@@ -336,19 +336,11 @@ export default async function HomePage() {
                   </span>
                 </button>
               </Link>
-
-              <a href="https://wa.me/6283846249279" target="_blank" className="group">
-                <button className="px-8 py-4 bg-white/30 dark:bg-white/5 backdrop-blur-xl text-[var(--foreground)] font-semibold rounded-full border border-white/20 dark:border-white/10 hover:border-cyan-400/50 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                  <span className="flex items-center gap-2">
-                    <MessageCircle className="w-5 h-5" />
-                    Chat via WhatsApp
-                  </span>
-                </button>
-              </a>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
+
 }
