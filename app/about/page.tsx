@@ -126,7 +126,7 @@ export default async function AboutPage() {
               className="group px-10 py-4 bg-white dark:bg-neutral-900 border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white font-semibold rounded-full transition-all duration-300 hover:scale-105 flex items-center gap-2"
             >
               <MessageCircle className="w-5 h-5" />
-              <span>Kirim Pesan</span>
+              <span>Channel</span>
             </Link>
           </div>
         </section>
@@ -191,3 +191,4 @@ export default async function AboutPage() {
     </div>
   );
 }
+
