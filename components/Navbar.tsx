@@ -51,20 +51,6 @@ export default function Navbar() {
   // Tombol Aksi Kustom (Desktop dan Mobile)
   const ActionButtons = ({ isMobile = false }) => (
     <>
-      {/* Tombol WhatsApp (BARU) */}
-      <a
-        href="https://wa.me/6283846249279"
-        target="_blank"
-        className={`
-          flex items-center gap-2 px-3 py-2 rounded-full text-sm font-semibold
-          bg-green-500 hover:bg-green-600 text-white transition-colors
-          ${isMobile ? 'w-full' : ''}
-        `}
-      >
-        <MessageCircle size={isMobile ? 18 : 16} />
-        <span className={isMobile ? 'flex-1' : 'hidden lg:inline'}>WhatsApp</span>
-      </a>
-
       {/* Tombol Hubungi (Telegram) */}
       <a
         href="https://t.me/evcorpofficial"
@@ -299,4 +285,5 @@ export default function Navbar() {
       <div className="h-14 md:h-16" />
     </>
   );
+
 }
