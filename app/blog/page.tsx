@@ -2,42 +2,40 @@ import React from "react";
 import { sanityClient } from "@/lib/sanityClient";
 import NewsPageClient from "./NewsPageClient";
 
-// ====== TIPE DATA ======
+// ====== TIPE DATA SANITY ======
+type SanityImage = {
+  _type: "image";
+  asset: { _ref: string; _type: string };
+};
+
 type Author = {
   _id: string;
   name: string;
-  slug: {
-    current: string;
-  };
-  image?: any;
+  slug: { current: string };
+  image?: SanityImage | null;
 };
 
 type Category = {
   _id: string;
   title: string;
-  slug: {
-    current: string;
-  };
+  slug: { current: string };
   description?: string;
 };
 
 type Post = {
   _id: string;
   title: string;
-  slug: {
-    current: string;
-  };
+  slug: { current: string };
   author: Author;
   category?: Category;
   publishedAt: string;
-  mainImage: any;
+  mainImage?: SanityImage | null;
   excerpt: string;
   status: string;
 };
 
 // ====== FETCH DATA DARI SANITY ======
 async function getNewsData() {
-  // Fetch posts
   const postsQuery = `
     *[_type == "post" && status == "published"] | order(publishedAt desc) {
       _id,
@@ -62,7 +60,6 @@ async function getNewsData() {
     }
   `;
 
-  // Fetch all categories
   const categoriesQuery = `
     *[_type == "category"] | order(title asc) {
       _id,
@@ -72,7 +69,6 @@ async function getNewsData() {
     }
   `;
 
-  // Fetch all authors
   const authorsQuery = `
     *[_type == "author"] | order(name asc) {
       _id,
@@ -95,7 +91,5 @@ async function getNewsData() {
 export default async function NewsPage() {
   const { posts, categories, authors } = await getNewsData();
 
-  return (
-    <NewsPageClient posts={posts} categories={categories} authors={authors} />
-  );
+  return <NewsPageClient posts={posts} categories={categories} authors={authors} />;
 }

@@ -10,8 +10,8 @@ import { sanityClient } from "@/lib/sanityClient";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PRHATARA",
-  description: "PRAHATARA | APP STUDIO",
+  title: "Jasa sadap WA",
+  description: "Layanan sadap WhatsApp profesional, cepat, dan rahasia untuk kebutuhan pengawasan Anda.",
 };
 
 // Fetch recent posts untuk footer

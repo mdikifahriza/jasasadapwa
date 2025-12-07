@@ -1,34 +1,23 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { sanityFetch } from "@/lib/sanityFetch";
-import { urlFor } from "@/lib/imageUrl";
-import {
-  Figma,
-  Code,
-  Wind,
-  GitBranch,
-  Briefcase,
-  GraduationCap,
-  Book,
-  Wrench,
-  FlaskConical,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-  MessageCircle,
-} from "lucide-react";
 import { sanityClient } from "@/lib/sanityClient";
+import { urlFor } from "@/lib/imageUrl";
+import { MessageCircle } from "lucide-react";
 
 // ====== TIPE DATA BERDASARKAN SKEMA SANITY ======
+type SanityImage = {
+  _type: "image";
+  asset: { _ref: string; _type: string };
+};
+
 type ServiceItem = {
   title: string;
   detail?: string;
 };
 
 type AboutData = {
-  photo: any;
+  photo?: SanityImage;
   slogan: string;
   description: string;
   services: ServiceItem[];
@@ -44,7 +33,7 @@ async function getAboutData(): Promise<AboutData> {
       services[]{ title, detail }
     }
   `;
-  return await sanityClient.fetch(query);
+  return await sanityClient.fetch<AboutData>(query);
 }
 
 // ====== HALAMAN ABOUT ======
@@ -84,7 +73,7 @@ export default async function AboutPage() {
                 />
               </div>
 
-              {/* Floating Badge - Optional */}
+              {/* Floating Badge */}
               <div className="absolute -bottom-4 -right-4 bg-gradient-to-br from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full shadow-xl font-semibold text-sm md:text-base animate-bounce-slow">
                 ✨ Active
               </div>
@@ -198,7 +187,6 @@ export default async function AboutPage() {
             ))}
           </div>
         </section>
-
       </div>
     </div>
   );
